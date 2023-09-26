@@ -438,23 +438,23 @@ importers:
         specifier: npm:react-dom@18.3.0-canary-09fbee89d-20231013
         version: /react-dom@18.3.0-canary-09fbee89d-20231013(react@18.2.0)
       react-dom-experimental-builtin:
-        specifier: npm:react-dom@0.0.0-experimental-09fbee89d-20231013
-        version: /react-dom@0.0.0-experimental-09fbee89d-20231013(react@18.2.0)
+        specifier: npm:react-dom@0.0.0-experimental-a41957507-20231017
+        version: /react-dom@0.0.0-experimental-a41957507-20231017(react@18.2.0)
       react-experimental-builtin:
-        specifier: npm:react@0.0.0-experimental-09fbee89d-20231013
-        version: /react@0.0.0-experimental-09fbee89d-20231013
+        specifier: npm:react@0.0.0-experimental-a41957507-20231017
+        version: /react@0.0.0-experimental-a41957507-20231017
       react-server-dom-turbopack:
         specifier: 18.3.0-canary-09fbee89d-20231013
         version: 18.3.0-canary-09fbee89d-20231013(react-dom@18.2.0)(react@18.2.0)
       react-server-dom-turbopack-experimental:
-        specifier: npm:react-server-dom-turbopack@0.0.0-experimental-09fbee89d-20231013
-        version: /react-server-dom-turbopack@0.0.0-experimental-09fbee89d-20231013(react-dom@18.2.0)(react@18.2.0)
+        specifier: npm:react-server-dom-turbopack@0.0.0-experimental-a41957507-20231017
+        version: /react-server-dom-turbopack@0.0.0-experimental-a41957507-20231017(react-dom@18.2.0)(react@18.2.0)
       react-server-dom-webpack:
         specifier: 18.3.0-canary-09fbee89d-20231013
         version: 18.3.0-canary-09fbee89d-20231013(react-dom@18.2.0)(react@18.2.0)(webpack@5.86.0)
       react-server-dom-webpack-experimental:
-        specifier: npm:react-server-dom-webpack@0.0.0-experimental-09fbee89d-20231013
-        version: /react-server-dom-webpack@0.0.0-experimental-09fbee89d-20231013(react-dom@18.2.0)(react@18.2.0)(webpack@5.86.0)
+        specifier: npm:react-server-dom-webpack@0.0.0-experimental-a41957507-20231017
+        version: /react-server-dom-webpack@0.0.0-experimental-a41957507-20231017(react-dom@18.2.0)(react@18.2.0)(webpack@5.86.0)
       react-ssr-prepass:
         specifier: 1.0.8
         version: 1.0.8(react-is@16.13.1)(react@18.2.0)
@@ -486,8 +486,8 @@ importers:
         specifier: npm:scheduler@0.24.0-canary-09fbee89d-20231013
         version: /scheduler@0.24.0-canary-09fbee89d-20231013
       scheduler-experimental-builtin:
-        specifier: npm:scheduler@0.0.0-experimental-09fbee89d-20231013
-        version: /scheduler@0.0.0-experimental-09fbee89d-20231013
+        specifier: npm:scheduler@0.0.0-experimental-a41957507-20231017
+        version: /scheduler@0.0.0-experimental-a41957507-20231017
       seedrandom:
         specifier: 3.0.5
         version: 3.0.5
@@ -20652,14 +20652,14 @@ packages:
       strip-json-comments: 2.0.1
     dev: true
 
-  /react-dom@0.0.0-experimental-09fbee89d-20231013(react@18.2.0):
-    resolution: {integrity: sha512-1NQmEIXK8VArmagvTqst5OGdiMUZcg52SNojFBNdn88LcpsU4xySzC3I11WHtrBqgbSQsK4IFSyPcY/ZfY/ZVw==}
+  /react-dom@0.0.0-experimental-a41957507-20231017(react@18.2.0):
+    resolution: {integrity: sha512-IWhU12IhdUu+iGn0LRjalPDwhsGkNNKh1HebeRi6jEn5cyH2ZlQKC1tUJuvT3Qol2BTvtdmjxqvyEWOA/3dK1w==}
     peerDependencies:
-      react: 0.0.0-experimental-09fbee89d-20231013
+      react: 0.0.0-experimental-a41957507-20231017
     dependencies:
       loose-envify: 1.4.0
       react: 18.2.0
-      scheduler: 0.0.0-experimental-09fbee89d-20231013
+      scheduler: 0.0.0-experimental-a41957507-20231017
     dev: true
 
   /react-dom@17.0.2(react@17.0.2):
@@ -20723,12 +20723,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-server-dom-turbopack@0.0.0-experimental-09fbee89d-20231013(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-t19DKEMbDMgLQe5SIDXvbuMUp2DoLKtztKJR8vyeaY5XCukJ1MJ4Nomcet8VQAHvAwi5geoF210uCca8qT7bsQ==}
+  /react-server-dom-turbopack@0.0.0-experimental-a41957507-20231017(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-xWBgP/3IPziWjI8QJQrIKQ0AmpUCC+/OZWXAzgU4WZKhyHhX7Znq/ZBeNjo7Xtub+MfCvfUgHb6eN7NKx9KrEg==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
-      react: 0.0.0-experimental-09fbee89d-20231013
-      react-dom: 0.0.0-experimental-09fbee89d-20231013
+      react: 0.0.0-experimental-a41957507-20231017
+      react-dom: 0.0.0-experimental-a41957507-20231017
     dependencies:
       acorn-loose: 8.3.0
       loose-envify: 1.4.0
@@ -20751,12 +20751,12 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /react-server-dom-webpack@0.0.0-experimental-09fbee89d-20231013(react-dom@18.2.0)(react@18.2.0)(webpack@5.86.0):
-    resolution: {integrity: sha512-Me8MiJGeWY3tGDG5QfUoqjROjzG0rGCrZP1O1V+Uvc2emuucP8VVSspCoFUxMRGCGSFhiUW+YyORlVAT5ulwxw==}
+  /react-server-dom-webpack@0.0.0-experimental-a41957507-20231017(react-dom@18.2.0)(react@18.2.0)(webpack@5.86.0):
+    resolution: {integrity: sha512-cY14etKExHLxmsZr5moK+oPtbmIxZdIJuS2ebE09e3c6XfsCfxo2SZ5nVGkJnrRv2dMPo12kh98l5OUIofxGmA==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
-      react: 0.0.0-experimental-09fbee89d-20231013
-      react-dom: 0.0.0-experimental-09fbee89d-20231013
+      react: 0.0.0-experimental-a41957507-20231017
+      react-dom: 0.0.0-experimental-a41957507-20231017
       webpack: 5.86.0
     dependencies:
       acorn-loose: 8.3.0
@@ -20810,8 +20810,8 @@ packages:
       react-lifecycles-compat: 3.0.4
     dev: true
 
-  /react@0.0.0-experimental-09fbee89d-20231013:
-    resolution: {integrity: sha512-Lw0XRArcs0sT5UzRo//eOgIliMYwy5jpMkYwqxuL2mK4J4sKBbbn6oYzxNs71GDV5g8KBbMbak/iG7lTf2tquw==}
+  /react@0.0.0-experimental-a41957507-20231017:
+    resolution: {integrity: sha512-dskY8EMP7dlRFXN+zSHZr4BYtfvJXW9OIg5pC542Jffujszni8scCx3x3gFm7P/RunYguQFltRF4RSa9Zai3fA==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -21891,8 +21891,8 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /scheduler@0.0.0-experimental-09fbee89d-20231013:
-    resolution: {integrity: sha512-IZtBMXpfeGONvYf+v1Isng6DobfO3oOAMb5unU10hGjROY2YZyYkFBoluf9NApZFzfFr3TEH+8FN6e9b3HipqA==}
+  /scheduler@0.0.0-experimental-a41957507-20231017:
+    resolution: {integrity: sha512-vOBTkmLbv7e0XrOZDvKKqjV/v1Ojo2CUEn3n13pL7BmFZGD/OYQUDozTA3i9p+hSlFKJapiwt8D+cakpKwNlWA==}
     dependencies:
       loose-envify: 1.4.0
     dev: true

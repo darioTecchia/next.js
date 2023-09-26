@@ -167,6 +167,9 @@ function createRSCAliases(
     'react-dom/server$': `next/dist/compiled/react-dom${bundledReactChannel}/server`,
     'react-dom/server.edge$': `next/dist/compiled/react-dom${bundledReactChannel}/server.edge`,
     'react-dom/server.browser$': `next/dist/compiled/react-dom${bundledReactChannel}/server.browser`,
+    'react-dom/static$': `next/dist/compiled/react-dom${bundledReactChannel}/static`,
+    'react-dom/static.edge$': `next/dist/compiled/react-dom${bundledReactChannel}/static.edge`,
+    'react-dom/static.browser$': `next/dist/compiled/react-dom${bundledReactChannel}/static.browser`,
     'react-server-dom-webpack/client$': `next/dist/compiled/react-server-dom-webpack${bundledReactChannel}/client`,
     'react-server-dom-webpack/client.edge$': `next/dist/compiled/react-server-dom-webpack${bundledReactChannel}/client.edge`,
     'react-server-dom-webpack/server.edge$': `next/dist/compiled/react-server-dom-webpack${bundledReactChannel}/server.edge`,
@@ -180,6 +183,8 @@ function createRSCAliases(
         'react/jsx-dev-runtime$': `next/dist/server/future/route-modules/app-page/vendored/${opts.layer}/react-jsx-dev-runtime`,
         react$: `next/dist/server/future/route-modules/app-page/vendored/${opts.layer}/react`,
         'react-dom$': `next/dist/server/future/route-modules/app-page/vendored/${opts.layer}/react-dom`,
+        'react-dom/static.edge$': `next/dist/server/future/route-modules/app-page/vendored/${opts.layer}/react-dom-static-edge`,
+        'react-dom/server.edge$': `next/dist/server/future/route-modules/app-page/vendored/${opts.layer}/react-dom-server-edge`,
         'react-server-dom-webpack/client.edge$': `next/dist/server/future/route-modules/app-page/vendored/${opts.layer}/react-server-dom-webpack-client-edge`,
       })
     } else if (opts.layer === WEBPACK_LAYERS.reactServerComponents) {

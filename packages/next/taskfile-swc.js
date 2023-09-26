@@ -38,6 +38,7 @@ module.exports = function (task) {
               ignoreDynamic: true,
               exportInteropAnnotation: true,
             },
+        sourceMaps: true,
         env: {
           targets: MODERN_BROWSERSLIST_TARGET,
         },
@@ -99,6 +100,15 @@ module.exports = function (task) {
           experimental: {
             keepImportAttributes,
             emitAssertForImportAttributes: keepImportAttributes,
+          },
+          baseUrl: __dirname,
+          paths: {
+            'react-dom/server.edge': [
+              './compiled/react-dom-experimental/server.edge',
+            ],
+            'react-dom/static.edge': [
+              './compiled/react-dom-experimental/static.edge',
+            ],
           },
           transform: {
             react: {
