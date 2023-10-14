@@ -35,7 +35,7 @@ export function cloneTransformStream(source: TransformStream) {
 }
 
 export function chainStreams<T>(
-  streams: ReadableStream<T>[]
+  ...streams: ReadableStream<T>[]
 ): ReadableStream<T> {
   const { readable, writable } = new TransformStream()
 
@@ -413,6 +413,7 @@ export async function continueFizzStream(
     getServerInsertedHTML,
     serverInsertedHTMLToHead,
     validateRootLayout,
+    postponed,
   }: {
     inlinedDataStream?: ReadableStream<Uint8Array>
     generateStaticHTML: boolean
@@ -424,6 +425,7 @@ export async function continueFizzStream(
     }
     // Suffix to inject after the buffered data, but before the close tags.
     suffix?: string
+    postponed?: 'prerender' | 'resume'
   }
 ): Promise<ReadableStream<Uint8Array>> {
   const closeTag = '</body></html>'
@@ -431,7 +433,9 @@ export async function continueFizzStream(
   // Suffix itself might contain close tags at the end, so we need to split it.
   const suffixUnclosed = suffix ? suffix.split(closeTag)[0] : null
 
-  if (generateStaticHTML) {
+  // If we're generating static HTML and there's an `allReady` promise on the
+  // stream, we need to wait for it to resolve before continuing.
+  if (generateStaticHTML && 'allReady' in renderStream) {
     await renderStream.allReady
   }
 
@@ -445,7 +449,7 @@ export async function continueFizzStream(
       : null,
 
     // Insert suffix content
-    suffixUnclosed != null && suffixUnclosed.length > 0
+    !postponed && suffixUnclosed != null && suffixUnclosed.length > 0
       ? createDeferredSuffixStream(suffixUnclosed)
       : null,
 
@@ -453,16 +457,16 @@ export async function continueFizzStream(
     inlinedDataStream ? createMergedTransformStream(inlinedDataStream) : null,
 
     // Close tags should always be deferred to the end
-    closeTag && createMoveSuffixStream(closeTag),
+    createMoveSuffixStream(closeTag),
 
     // Special head insertions
     // TODO-APP: Insert server side html to end of head in app layout rendering, to avoid
     // hydration errors. Remove this once it's ready to be handled by react itself.
-    getServerInsertedHTML && serverInsertedHTMLToHead
+    !postponed && getServerInsertedHTML && serverInsertedHTMLToHead
       ? createHeadInsertionTransformStream(getServerInsertedHTML)
       : null,
 
-    validateRootLayout
+    !postponed && validateRootLayout
       ? createRootLayoutValidatorStream(
           validateRootLayout.assetPrefix,
           validateRootLayout.getTree
